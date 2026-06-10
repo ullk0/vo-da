@@ -1,0 +1,83 @@
+body {
+    width: 100vw;
+    height: 100vh;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 12px;
+
+    display: flex;
+    gap: 0px;
+
+    background-color: white;
+}
+
+@font-face {
+    font-family: "Wremena";
+    src:
+        url("font/Wremena\ Regular.otf") format("otf"),
+        url("font/Wremena\ Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Wremena";
+    src:
+        url("font/Wremena\ Light.otf") format("otf"),
+        url("font/Wremena\ Light.woff") format("woff");
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Wremena";
+    src:
+        url("font/Wremena\ Bold.otf") format("otf"),
+        url("font/Wremena\ Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    z-index: 100;
+
+}
+
+a {
+    padding-top: 1rem;
+
+    font-size: 20pt;
+    font-family: Wremena;
+    text-decoration: none;
+
+    color: black;
+}
+
+a:hover {
+    font-size: 20pt;
+    font-family: Wremena;
+    text-decoration: underline 6px;
+
+    color: black;
+}
+
+p {
+    font-size: 20pt;
+    font-family: Wremena;
+}
+
+.main__index-column {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    margin: 0;
+}
