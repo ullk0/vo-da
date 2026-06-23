@@ -2,13 +2,17 @@ body {
     width: 100vw;
     height: 100vh;
 
-    box-sizing: border-box;
     margin: 0;
 
     display: flex;
-    gap: 0px;
 
     background-color: white;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -16,7 +20,7 @@ body {
     src:
         url("font/Wremena\ Regular.otf") format("otf"),
         url("font/Wremena\ Regular.woff") format("woff");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -25,7 +29,7 @@ body {
     src:
         url("font/Wremena\ Light.otf") format("otf"),
         url("font/Wremena\ Light.woff") format("woff");
-    font-weight: light;
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -34,7 +38,7 @@ body {
     src:
         url("font/Wremena\ Bold.otf") format("otf"),
         url("font/Wremena\ Bold.woff") format("woff");
-    font-weight: bold;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -42,7 +46,6 @@ nav {
     width: 100%;
     height: 100%;
 
-    position: relative;
     display: flex;
 }
 
@@ -51,46 +54,115 @@ nav section {
 
     width: 100%;
     height: 100%;
+    padding-top: 2rem;
 
     justify-content: center;
+    align-items: flex-start;
 }
 
 a,
-p {
-    padding-top: 1rem;
+p,
+h1,
+h3 {
+    padding: 0;
+    margin-block: 0;
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 120%;
     font-family: Wremena;
+    font-weight: 200;
     text-decoration: none;
     font-variant-numeric: lining-nums;
 
     color: black;
 }
 
+h1,
+h3,
+footer a {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
 a:hover {
-    font-size: 20pt;
-    font-family: Wremena;
     text-decoration: underline 6px;
 
     color: black;
 }
 
-.main__index-column {
-    width: 100%;
-    height: 100%;
-
-    box-sizing: border-box;
-    margin: 0;
-}
-
+.body__otherside,
 #nav__column--otherside:has(a:hover) {
-    background-color: blue;
+    background-color: #dedede;
+    background-image: radial-gradient(circle, #a3a3a3 0.4px, transparent 0.4px), radial-gradient(circle, #a3a3a3 0.4px, transparent 0.4px);
+    background-size: 2.5px 10px, 10px 2.5px;
+    background-position: -1.25px -5px, -5px -1.25px;
 }
 
+.body__luminescent,
 #nav__column--luminescent:has(a:hover) {
-    background-color: purple;
+    background-color: #B1ECBE;
 }
 
+.body__europe,
 #nav__column--europe:has(a:hover) {
-    background-color: green;
+    background-color: #003399;
+}
+
+img {
+    width: 100%;
+}
+
+.main {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.main__shop-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+hr {
+    width: 100%;
+    height: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    border-top: 6px solid #000;
+
+    flex: 0 0 auto;
+    align-self: stretch;
+}
+
+footer,
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+article {
+    gap: 0.5rem;
+}
+
+article h3 {
+    text-align: start;
 }
