@@ -9,6 +9,7 @@
 </head>
 
 <body class="body__europe">
+    <div class="europe-star" aria-hidden="true"></div>
     <nav>
         <section id="nav__column--otherside">
             <a href="/otherside.html">01</a>
@@ -26,10 +27,7 @@
         <hr>
         <h1>европа</h1>
         <hr>
-        <p>В&nbsp;проекте много нашей рефлексии о&nbsp;процессе, об&nbsp;архивации, работе с&nbsp;архивом
-            и&nbsp;об&nbsp;умении возвращаться к&nbsp;старым работам. Нам кажется, что в&nbsp;Школе проекты часто
-            существуют в&nbsp;вакууме, зацикливаются на&nbsp;самих себя. Нам хочется попробовать противоположный подход
-            к&nbsp;работе, экологичнее отнестись к&nbsp;точке старта проекта.</p>
+        <p>Вторая серия&nbsp;&mdash; фотопроект из&nbsp;путешествия в&nbsp;Европу. В&nbsp;течение 19&nbsp;дней мы&nbsp;фотографировали городские пейзажи и&nbsp;детали городского ландшафта, искали странные артефакты. Мы&nbsp;снимали остановленные в&nbsp;случайной точке процессы, скрытые и&nbsp;неочевидные для туриста сюжеты. Эта серия была важна для самоопределения проекта. Пока мы&nbsp;работали над ней, мы&nbsp;уточнили наш фокус и&nbsp;еще раз поняли, что очарованы поиском случайностей и&nbsp;ошибок.</p>
         <hr>
         <div class="main__grid">
             <img src="projects/europe/03-a.jpeg">
@@ -61,8 +59,31 @@
         <footer>
             <a href="/index.html">проекты</a>
             <a href="/shop.html">магазин</a>
-            <h3>антон волненко и ульяна данилевская<br>@vo2da
+            <h3>антон волненко и ульяна данилевская<br>@vo2da москва 2026
             </h3>
         </footer>
     </div>
+    <script>
+        (() => {
+            const star = document.querySelector('.europe-star');
+            if (!star) return;
+
+            const slowPlusSpeed = 0.1;
+            let ticking = false;
+
+            const rotateStar = () => {
+                star.style.setProperty('--europe-star-rotation', `${window.scrollY * slowPlusSpeed}deg`);
+                ticking = false;
+            };
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(rotateStar);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            rotateStar();
+        })();
+    </script>
 </body>
