@@ -46,7 +46,6 @@ p,
 h1,
 h3 {
     padding: 0;
-    margin-block: 0;
     text-box: trim-both cap alphabetic;
 
     font-size: 1.4rem;
@@ -68,6 +67,7 @@ footer a {
 }
 
 h3 {
+    margin-block: 0;
     letter-spacing: 2%;
     line-height: 140%;
     font-size: 1rem;
@@ -99,11 +99,11 @@ nav section {
 #nav__column--otherside:has(a:hover) {
     background-color: #123d2f;
     background-image:
-        linear-gradient(rgba(210, 255, 220, 0.42) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(210, 255, 220, 0.42) 1px, transparent 1px),
+        linear-gradient(rgba(210, 255, 220, 0.233) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(210, 255, 220, 0.283) 1px, transparent 1px),
         linear-gradient(rgba(210, 255, 220, 0.2) 0.5px, transparent 0.5px),
         linear-gradient(90deg, rgba(210, 255, 220, 0.2) 0.5px, transparent 0.5px);
-    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-size: 5rem 5rem, 5rem 5rem, 1rem 1rem, 1rem 1rem;
     background-position: -1px -1px, -1px -1px, -0.5px -0.5px, -0.5px -0.5px;
 }
 
@@ -202,7 +202,7 @@ img {
     flex-direction: column;
     align-items: center;
 
-    gap: 2rem;
+    gap: 1rem;
     padding: 1.6rem;
     margin-bottom: 2rem;
 }
@@ -306,7 +306,7 @@ footer,
 article {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 article {
